@@ -1,0 +1,4 @@
+praw>=7.7.0
+python-dotenv>=0.21.0
+sendgrid>=6.11.0
+watchdog>=3.0.0

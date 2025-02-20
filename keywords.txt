@@ -1,0 +1,15 @@
+alwaysanswer
+answering service
+chatbot
+voicebot
+SMS campaign
+twilio
+outbound call
+whatsapp chatbot
+chatbot for whatsapp
+voice AI
+vapi.ai
+retellai
+vocol
+# Add more keywords below, one per line
+# Lines starting with # will be ignored
