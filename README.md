@@ -6,7 +6,7 @@ Get email notifications when specific keywords are mentioned on Reddit using Sen
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/reddit-monitor.git
+   git clone https://github.com/xuchen/reddit-monitor.git
    cd reddit-monitor
 
 Install dependencies
@@ -53,7 +53,7 @@ python reddit_monitor.py
 3. Add/remove keywords without restarting
 4. Use comments in the file with `#`
 
-## How to Run
+## How to Run Locally
 
 ```
 # Install dependencies
@@ -70,3 +70,12 @@ touch keywords.txt
 # Run the monitor
 python reddit_monitor.py
 ```
+
+## How to Run on the cloud For Free
+
+I use the pythonanywhere.com's free account. Note that free account restricts
+outbound internet access from a [whitelist](https://www.pythonanywhere.com/whitelist/). Luckily both Reddit and Sendgrid are on the list.
+
+Simply follow the "I want to clone and hack on my GitHub project" tutorial 
+from pythonanywhere.com after creating the account, to clone your repo and run
+`python reddit_monitor.py` from the console. Then you are all set!
