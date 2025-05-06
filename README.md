@@ -73,6 +73,44 @@ python reddit_monitor.py
 
 ## How to Run on the cloud For Free
 
+### Oracle Cloud Free
+
+First register for Oracle Cloud. You do need to associate with a credit card.
+They said they won't charge me in their free plan.
+
+Their Always Free plan has:
+
+1. AMD Compute Instance -- AMD based Compute VMs with 1/8 OCPU and 1 GB memory each -- Always Free -- 2 AMD based compute VMs
+2. Arm Compute Instance -- Arm-based Ampere A1 cores and 24 GB of memory usable as 1 VM or up to 4 VMs -- Always Free -- 3,000 OCPU hours and 18,000 GB hours per month
+
+First create your instance, make sure to upload your public SSH key.
+
+When creating your instance, make sure to select the Free tier. Their cost analysis will show $2/month for boot volume. This should be a known bug.
+
+After it's up and runnning, assign a public IPv4 address, copy it, and then:
+
+`ssh ubuntu@<ip address>`
+
+Once you log in, you can do the following:
+
+```
+git clone https://github.com/xuchen/reddit-monitor.git
+cd reddit-monitor
+sudo apt-get install python3-pip
+pip install --break-system-packages -r requirements.txt
+
+Note that the last step is a quick and dirty way to install all dependencies.
+
+Now you need to edit the .env file with your reddit and sendgrid credentials.
+After that, you can run the command: `nohup python3 reddit-monitor.py`
+
+Now your system should be up and running!
+
+### PythonAnywhere
+
+Note: it turned out that PythonAnywhere only gives you 100s of CPU time every day.
+It's far less than enough.
+
 I use the pythonanywhere.com's free account. Note that free account restricts
 outbound internet access from a [whitelist](https://www.pythonanywhere.com/whitelist/). Luckily both Reddit and Sendgrid are on the list.
 
